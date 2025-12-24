@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.page {
+    width: 100vw;
+    height: 100vh;
+    background: 
+        linear-gradient(135deg, rgba(1, 10, 37, 0.9), rgba(89, 96, 113, 0.9)),
+        url("assets/bg.jpg") center/cover no-repeat;
+        
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 60%);
+}
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #e5e7eb;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+}
+
+header p {
+    color: #9ca3af;
+    margin-top: 8px;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tab {
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(31,41,55,0.9);
+    color: #e5e7eb;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: #2563eb;
+}
+
+.tab.active {
+    background: #2563eb;
+}
+body {
+    background-image: url("C:\Users\HP\Desktop\personal portfolio\bg.jpgs");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content {
+    display: none;
+    animation: fadeUp 0.4s ease;
+}
+
+.content.active {
+    display: block;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+}
+
+p {
+    line-height: 1.7;
+    color: #dadbd1;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.grid li {
+    background: rgba(31,41,55,0.9);
+    padding: 12px;
+    border-radius: 8px;
+    list-style: circle;
+}
+
+.card {
+    background: rgba(31,41,55,0.95);
+    padding: 22px;
+    border-radius: 14px;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+}

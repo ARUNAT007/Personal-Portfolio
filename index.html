@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>ARUNA T</h1>
+            <p>Software Engineer • Data Engineer</p>
+        </header>
+
+        <!-- NAV -->
+        <nav class="tabs">
+            <button class="tab" onclick="openTab(event,'about')">About</button>
+            <button class="tab" onclick="openTab(event,'skills')">Skills</button>
+            <button class="tab" onclick="openTab(event,'certifications')">Certifications</button>
+            <button class="tab" onclick="openTab(event,'projects')">Projects</button>
+            <button class="tab" onclick="openTab(event,'resume')">Resume</button>
+            <button class="tab" onclick="openTab(event,'career')">Career</button>
+            <button class="tab" onclick="openTab(event,'contact')">Contact</button>
+
+        </nav>
+
+        <!-- CONTENT -->
+        <main>
+
+            <section id="about" class="content">
+                <h2>About Me</h2>
+                <p>
+                    B.Tech student in Computer Science and Business Systems
+                    at Bannari Amman Institute of Technology.
+                    Product-oriented engineer with strong foundations in
+                    algorithms, systems engineering, and applied AI.
+                </p>
+            </section>
+
+            <section id="certifications" class="content">
+                <h2>Certifications</h2>
+                <ul class="grid">
+                    <li>C Programming - Coursera</li>
+                    <li>Python - Infosys Springboard</li>
+                    <li>Data Analysis - HP Life</li>
+                </ul>
+            </section>
+
+            <section id="skills" class="content">
+                <h2>Technical Skills</h2>
+                <ul class="grid">
+                    <li>C Programming</li>
+                    <li>Python (Intermediate)</li>
+                    <li>Java (Intermediate)</li>
+                    <li>SQL(Basic)</li>
+                    <li>HTML, CSS, JavaScript</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="content">
+                <h2>Projects</h2>
+                <div class="card">
+                    <h3>QR-Based Attendance Management System</h3>
+                    <p>
+                        Developed responsive frontend interfaces and integrated
+                        backend APIs for real-time QR attendance marking,
+                        significantly reducing manual effort.
+                    </p>
+                    <span>Tech Stack: HTML, CSS, JavaScript</span>
+                    <a href="https://github.com/ARUNAT007?tab=repositories" target="_blank">GitHub Link</a>
+                </div>
+            </section>
+
+            <section id="resume" class="content">
+                <p>
+                    <h2>Resume</h2>
+                    <a href="C:\Users\HP\Desktop\personal portfolio\portfolio\Gray and Green Simple Professional  CV Resume (3).pdf" target="_blank">Click to view Resume</a> 
+                </p>
+            </section>
+
+            <section id="career" class="content">
+                <h2>Career Target</h2>
+                <p><strong>Roles:</strong> Software Engineer, Data Engineer</p>
+                <p><strong>Companies:</strong> Amazon, Google, Microsoft, Meta, Apple</p>
+                <p><strong>Expected CTC:</strong> ₹20–30 LPA</p>
+            </section>
+
+            <section id="contact" class="content">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:arunathiru05@gmail.com">arunathiru05@gmail.com</a></p>
+                <p>Phone: +91 6379448867</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/arunat05" target="_blank">LinkedIn</a> |
+                    <a href="https://leetcode.com/progress/" target="_blank">LeetCode</a>
+                </p>
+            </section>
+
+        </main>
+
+    </div>
+</div>
+
+<script>
+function openTab(evt, tabId) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
